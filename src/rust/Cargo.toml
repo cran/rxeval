@@ -1,0 +1,31 @@
+# Its own workspace: R builds this crate from inside the package with
+# whatever toolchain the user has, and it must not depend on the layout of
+# the repository it happens to live in.
+[workspace]
+
+[package]
+name = 'rxevalr'
+publish = false
+version = '0.1.0'
+edition = '2021'
+rust-version = '1.65'
+
+[lib]
+crate-type = [ 'rlib', 'staticlib' ]
+name = 'rxevalr'
+
+[[bin]]
+name = 'document'
+path = 'document.rs'
+
+[dependencies]
+extendr-api = '*'
+# A version, not a path. This is what makes the package build anywhere —
+# on CRAN's machines, from a tarball, with no repository around it. It also
+# means `cargo vendor` can gather the sources into vendor.tar.xz, which is
+# how CRAN builds with no network at all.
+rxeval = '0.1'
+
+[profile.release]
+lto = true
+codegen-units = 1

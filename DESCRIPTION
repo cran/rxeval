@@ -1,0 +1,38 @@
+Package: rxeval
+Title: Evaluate 'ODK'/'OpenRosa' 'XForms' Logic
+Version: 0.1.3
+Authors@R: c(
+    person("André", "Leite", , "leite@castlab.org", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-4718-9766")),
+    person("Raydonal", "Ospina", , "raydonal@castlab.org", role = "aut",
+           comment = c(ORCID = "0000-0002-9884-9090")),
+    person("Cristiano", "Ferraz", , "cferraz@castlab.org", role = "aut",
+           comment = c(ORCID = "0000-0002-6838-6734")),
+    person("The authors of the vendored Rust crates", role = "cph",
+           comment = "see inst/AUTHORS for details")
+    )
+Description: Check what a questionnaire's own rules say about a submission,
+    and which of its expressions will behave differently on a tablet than
+    in a browser. Wraps the 'rxeval' 'Rust' crate.
+License: BSD_2_clause + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 8.0.0
+Config/rextendr/version: 0.5.0
+SystemRequirements: Cargo (Rust's package manager), rustc >= 1.65.0, xz
+Depends: R (>= 4.2)
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+URL: https://milkway.github.io/rxeval/r/,
+        https://github.com/milkway/rxeval,
+        https://milkway.github.io/rxeval/
+BugReports: https://github.com/milkway/rxeval/issues
+NeedsCompilation: yes
+Packaged: 2026-10-28 13:42:18 UTC; leite
+Author: André Leite [aut, cre] (ORCID: <https://orcid.org/0000-0002-4718-9766>),
+  Raydonal Ospina [aut] (ORCID: <https://orcid.org/0000-0002-9884-9090>),
+  Cristiano Ferraz [aut] (ORCID: <https://orcid.org/0000-0002-6838-6734>),
+  The authors of the vendored Rust crates [cph] (see inst/AUTHORS for
+    details)
+Maintainer: André Leite <leite@castlab.org>
+Repository: CRAN
+Date/Publication: 2026-11-17 12:00:07 UTC
